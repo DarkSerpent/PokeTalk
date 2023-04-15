@@ -15,6 +15,7 @@ A lot of this is lifted from the README.txt files included in the zip file:
 * ...Not really, I just couldn't be bothered to set it up.
 * I'm sorry.
 * Read the comments contained in the files for everything else!
+* NOTE! I did not include all the font files in "/style/fonts" due to one of them being licensed! Please check the README!
 
 ## Credits
 * tooltip code taken from w3schools
