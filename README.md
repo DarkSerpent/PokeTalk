@@ -1,5 +1,5 @@
 # PokéTalk
-A hastily-designed example of what a "contemporary" PokéNav could look like in HTML for use in PTU
+A hastily-designed example of what a "contemporary" PokéNav could look like in HTML for use in PTU (or any Pokémo-based roleplaying/tabletop server, really)
 
 ## What is the purpose of this?
 Primarily designed for my own living server with 1 GM and several players, where it was nearly impossible to keep track of which player owned the contact information for which NPC. In addition, whenever a long break (by either the player or GM) would occur, it was sometimes extremely hard to remember those few NPCs that we only met once!
