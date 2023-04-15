@@ -10,12 +10,12 @@ The "example" folder is the exact code that I use for my own home game (as of 4-
 
 # Instructions
 A lot of this is lifted from the README.txt files included in the zip file:
-• Edit poketalk_reference.html to make changes to the site! Publish a link to poketalk.html for the phone-screen overlay!
-• The search function doesn't work. This is intentional.
-• ...Not really, I just couldn't be bothered to set it up.
-• I'm sorry.
-• Read the comments contained in the files for everything else!
+* Edit poketalk_reference.html to make changes to the site! Publish a link to poketalk.html for the phone-screen overlay!
+* The search function doesn't work. This is intentional.
+* ...Not really, I just couldn't be bothered to set it up.
+* I'm sorry.
+* Read the comments contained in the files for everything else!
 
 # Credits
-• tooltip code taken from w3schools
-• scrollbar code taken from digitalocean
+* tooltip code taken from w3schools
+* scrollbar code taken from digitalocean
