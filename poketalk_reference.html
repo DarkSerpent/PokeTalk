@@ -1,0 +1,159 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1920, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes">
+
+<title>Reference Document</title>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/chat.css">
+<link rel="stylesheet" href="style/search.css">
+<link rel="stylesheet" href="style/scroll.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">  
+	    $(document).ready(function () {  
+	            $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click(function () {  
+	                    $(this).siblings('.child-' + this.id).toggle();  
+	                });  
+	            $('tr[@class^=child-]').hide().children('td');  
+	    });  
+</script>
+<!-- Hello! This here is my extremely messy code to sort each table entry alphabetically so I don't have to painstakingly sing the ABC song every time I add a new contact! -->
+<!-- In case you're wondering, yes it does in fact check all the text (including comments) before sorting! I'm incredibly stupid, feel free to replace this if you want. -->
+<script>
+   window.onload = function sortTable() {
+      var detail, rows, sorted, i, x, y, sortFlag;
+      detail = document.querySelector(".detail");
+      sorted = true;
+      while (sorted) {
+         sorted = false;
+         rows = detail.rows;
+         for (i = 1; i < rows.length - 1; i++) {
+            sortFlag = false;
+            x = rows[i].getElementsByTagName("TD")[0];
+            y = rows[i + 1].getElementsByTagName("TD")[0];
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+               sortFlag = true;
+               break;
+            }
+         }
+         if (sortFlag) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            sorted = true;
+         }
+      }
+   }
+</script>
+</head>
+
+<body>
+	<div class="navHeader">
+		&nbsp;
+		<img src="img/pokenav-logo.png" style="vertical-align:middle">&nbsp;
+		PokéTalk
+			<br /><div class="crowley">&nbsp;&nbsp;Product of <font style="font-family:verdana">©</font> Crowley Corporation</div>
+			<span class="absolutemoving"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Type to search PokéTalk..."></span>
+	</div>
+
+
+	<table id="detail_table" class="detail" width=100%>   
+	    <thead>  
+	    <tr>  
+	        <th></th>  
+	    </tr>  
+	</thead>  
+	</br> </br>
+	<tbody>  
+		<tr>
+	        <td>
+				<!-- Please fill in the contact's name about "Name for Alphabetical Sorting" (see comment above the <script> tag for the reason why)! -->
+				<!-- Name for Alphabetical Sorting: Z_EMPTY -->
+				<!-- TRAINER/POKEMON ICON -->
+				<img class="iconDiv" src="icons/question.png" width=100px height=100px style="vertical-align:middle">
+				<!-- NAME OF TRAINER/POKEMON + THEIR @ -->
+				<!-- If you want to add a "Verification" option like in the Example folder, uncomment the following and remove the <h1> right before "Empty Contact"! -->
+				<!--
+				<h1><div class="tooltip"><img src="img/verified-gym.png" width=20px height=20px><span class="tooltiptext">This account is notable because it has been verified as a concurrently-active gym leader.</span> </div>
+				-->
+				<!-- The images for verified-corporate, verified-gym, verified-nurse, verified-officer, verified-ranger, and verified-researcher are supplied! -->
+				<h1>Empty Contact</h1>&nbsp;&nbsp;<font style="color:gray;">@blank</font>
+					<!-- GYM BADGES -->
+					<!-- Whatever your gym badges are called, replace the text after "img/" with it! -->
+					<!-- If your badges would go off-screen and create a new line, you'll have to either shorten the name, widen the phone-screen layout, or use <span>.
+					(I'm sure there's a smarter way to handle that...)
+					-->
+					<!-- <img src="img/Badge_1.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_2.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_3.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_4.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_5.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_6.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_7.png" width=20px height=20px> -->
+					<!-- <img src="img/Badge_8.png" width=20px height=20px> -->
+					<!-- CONTEST BADGES -->
+					<!-- This should be self-explanatory. In case you're wondering why the tooltip shows up on the left side of the screen, it's so it doesn't leave the bounds of the phone-screen layout and add a horizontal scroll bar.
+					(Again, I'm sure there's a smarter way to handle that...
+					-->
+					<!--
+					<div class="tooltip">
+						<img src="img/Contest_Ribbon.png" width=20px height=20px>
+						<span class="contestribbons"><span class="contest-text">
+						<span class="number">×1</span> Badge Name Here<br>
+						<span class="number">×1</span> Badge Name Here<br>
+						<span class="number">×1</span> Badge Name Here<br>
+						<span class="number">×1</span> Badge Name Here<br>
+						<span class="number">×1</span> Badge Name Here<br>
+						</span></span>
+					</div>
+					-->
+				<!-- BIRTHDAY + OTHER INFORMATION (CAMPAIGN SPECIFIC) -->
+				<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="color:gray;"><h7>🎂 No Birthday Entered</h7></font>
+				<!-- In my campaign, certain characters are part of "Teams", so I add that bit of extra information here for aesthetic purposes (example below): -->
+				<!--
+				<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="color:gray;"><h7>🎂 Birthday Jan. 1st, 1999 — 👥 Team PokéMart</h7></font>
+				-->
+				<!-- MOOD MESSAGE -->
+					<div class="chat">
+						<div class="msg rcvd">No message entered.</div>
+					</div>
+				<span class="textmoving">
+				<!-- DOES THE PLAYER OWN THIS CONTACT? -->
+				<!-- Put whatever players are in your home game here! The unordered list splits into two-columns to save space (and for readability)! -->
+				<!-- The ✔️ is two characters! Remember that when changing them out for ❌! -->
+				<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="doiown"><div class="tooltip">📱 Do I Own This Contact?</span><span class="doiownlist"><span class="contacts"> 
+				<ul>
+					<li>✔️ Player 1</li>
+					<li>✔️ Player 2</li>
+					<li>✔️ Player 3</li>
+					<li>✔️ Player 4</li>
+					<li>❌ Player 5</li>
+					<li>❌ Player 6</li>
+				</ul>
+				<!-- ONLINE + GPS STATUS -->
+				</span></div></span><span class="online">&nbsp;&nbsp;&nbsp;🟢 <b>Online</b> 📶&nbsp;<b>GPS Enabled</b></span>
+				<!-- </span></div></span><span class="online">&nbsp;&nbsp;&nbsp;🟢 <b>Online</b> 🚫&nbsp;<b>GPS Disabled</b></span> -->
+				<!-- </span></div></span><span class="online">&nbsp;&nbsp;&nbsp;⛔ <b>Do Not Disturb</b> 📶&nbsp;<b>GPS Enabled</b></span> -->
+				<!-- </span></div></span><span class="online">&nbsp;&nbsp;&nbsp;⛔ <b>Do Not Disturb</b> 🚫&nbsp;<b>GPS Disabled</b></span> -->
+				<!-- </span></div></span><span class="online">&nbsp;&nbsp;&nbsp;🟢 <b>Online</b> 📶&nbsp;<b>GPS Enabled</b></span> -->
+				<!-- </span></div></span><span class="online">&nbsp;&nbsp;&nbsp;🔘 <b>Offline</b> 📴&nbsp;<b>No Connection</b></span> -->
+				</span>
+			</td>
+	    </tr> 
+	</tbody>  
+	</table>  
+
+<br /><br /><br />
+<!-- I decided to be cute here...you see, there's some blank space left at the bottom of the page due to the tooltip-text that appears when you hover over "Do I Own This Contact?" -->
+<!-- I think it looks fine, at least! -->
+<!-- (...There's probably a better way to handle this.) -->
+<center>
+	<span class="footer">🛑 Uh-oh! There's nobody left!</span>
+	<br /><br /><div class="crowley">Product of <font style="font-family:verdana">©</font> Crowley Corporation</div>
+</center>
+
+</body>
+</html>
