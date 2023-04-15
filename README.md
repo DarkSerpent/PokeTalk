@@ -8,6 +8,14 @@ In short, this is an over-designed, yet simultaneously lacking interpertation of
 
 The "example" folder is the exact code that I use for my own home game (as of 4-13-2023, which is the last time I've updated it). The raw files contained outside the example folder is a skeleton that you can repurporse like jangled markup madlibs.
 
+# Instructions
+A lot of this is lifted from the README.txt files included in the zip file:
+• Edit poketalk_reference.html to make changes to the site! Publish a link to poketalk.html for the phone-screen overlay!
+• The search function doesn't work. This is intentional.
+• ...Not really, I just couldn't be bothered to set it up.
+• I'm sorry.
+• Read the comments contained in the files for everything else!
+
 # Credits
 • tooltip code taken from w3schools
 • scrollbar code taken from digitalocean
