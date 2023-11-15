@@ -23,8 +23,16 @@
 			background-color: #fc92a6;
 			color: #ffffff;
 			width: 100%;
-			position: absolute;
-			line-height: 60px;
+			height: 10%;
+			margin-bottom: 0;
+			overflow: auto;
+			position: relative;
+			z-index: 2;
+		}
+		div.navHeader .headerText {
+			display: block;
+			margin-left: 65px; /* Adjust this value as needed for spacing */
+			margin-top: -37px; /* Adjust this value to push the text down */
 		}
 		.crowley {
 			font-size: 12px;
@@ -36,6 +44,12 @@
             margin-left: 45px;
 			position: relative;
 			bottom: 9px;
+			margin-left: 10px; /* Adjust this value as needed for spacing */
+			line-height: 1.0; /* Adjust this value as needed for spacing */
+		}
+		div.navHeader img {
+			vertical-align: middle;
+			margin-top: 10px; /* Adjust this value to push the icon down */
 		}
 		h1 {
 			font-size: 25px;
@@ -173,6 +187,15 @@
 			font-size: 15px;
 			font-family: Dyno Sans;
 			src: url(fonts/Dyno-Bold.ttf);
+			text-align: center;
+		}
+		.doiownlist ul {
+			text-align: left;
+			padding: 0; /* Remove default padding for the ul element */
+			margin-left: 20px;
+		}
+		.doiownlist li {
+			list-style-type: none; /* Remove default list styles */
 		}
 		.footer {
 			font-size: 25px;
@@ -231,14 +254,14 @@
 			width: 150%;
 			background-color: black;
 			color: #fff;
-			border-radius: 6px;
+			border-radius: 10px;
 			padding: 5px 15;
 
 			/* Position the tooltip */
 			position: absolute;
 			z-index: 1;
 			top: 25px;
-			left: 10px;
+			left: 15px;
 		}
 		.tooltip:hover .tooltiptext {
 			visibility: visible;
@@ -259,3 +282,21 @@
 			-webkit-columns: 2;
 			-moz-columns: 2;
 		}​
+		.contactsContainer {
+			position: relative;
+			top: -10px; /* Adjust this value as needed */
+		}
+		#detail_table h1 {
+			margin: 0;
+			padding: 0;
+		}
+		#detail_table th {
+			padding: 0;
+		}
+		.detail {
+			display: table;
+			width: 100%;
+		}
+		.detail td {
+			display: table-cell;
+		}
